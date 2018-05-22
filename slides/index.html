@@ -7,18 +7,22 @@
 		<title>DevTools for Designers</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/devtools-for-designers.css">
 
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Golden Age of Web Platform</section>
+				<section>
+					<h1>Golden Age of Web Platform</h1>
+				</section>
 
 				<section>
-					<p>Web Standards</p>
-					<p>Frameworks & Libraries</p>
-					<p>Developer tools</p>
+					<div id="pillars">
+						<h2>Web Standards</h2>
+						<h2>Frameworks & Libraries</h2>
+						<h2>Developer tools</h2>
+					</div>
 
 					<aside class="notes">
 						- web platform more capable than ever
@@ -30,7 +34,10 @@
 				</section>
 
 				<section>
-					<p>DevTools in <strong>all browsers</strong>  provide a roboust toolkit to empower <strong>web developers</strong> .</p><p class="fragment">What about web designers?</p>
+					<p class="quote quote--left">DevTools in <strong>all browsers</strong>  provide
+					<br>a robust toolkit to empower
+					<br><strong>web developers</strong>.
+					<br><span class="fragment">What about web designers?</span></p>
 				</section>
 
 				<section>
@@ -49,8 +56,9 @@
 					</ul>
 				</section>
 
-				<section>
+				<section id="firebug" data-background="#fff">
 					<h1>Firebug</h1>
+					<img src="images/firebug_transparent.png" alt="Firebug tool logo.">
 					<aside class="notes">
 						- inspired & competing with Venkman, DOMInspector
 						- community of enthusiasts
@@ -59,7 +67,7 @@
 				</section>
 
 				<section>
-					<h1>Dabblet</h1>
+					<img src="images/screenshot_dabblet.jpg" alt="">
 					<aside class="notes">
 						- by Lea Verou
 						- online CSS editor & playground like CodePen
@@ -67,6 +75,13 @@
 						- incorporated ideas existing at the time (colors, timing function editor)
 						- pioneered new ideas: gradients, font, angle, duration, distance
 						- influenced DevTools ever since
+
+background: #f06;
+background: linear-gradient(45deg, #f06, yellow);
+min-height: 100%;
+transition: background 2s ease-in-out;
+transform: rotate(235deg) translateX(400px);
+font-family: Helvetica, sans-serif;
 					</aside>
 				</section>
 
@@ -81,16 +96,18 @@
 				</section>
 
 				<section>
-					<p>What web designers need so they can <br> <i class="fragment">really</i> design in the browser?</p>
+					<p class="quote quote--left">What do web designers need
+					<br>to <strong>really</strong> design in the browser?</p>
 				</section>
 
 				<section>
-					<ul>
-						<li>Freedom</li>
-						<li>Confidence</li>
-						<li>Specialized tools</li>
-						<li>Ergonomics</li>
-					</ul>
+					<div class="divider--four">
+						<div class="box"><h2>Freedom</h2></div>
+						<div class="box"><h2>Confidence</h2></div>
+						<div class="box"><h2>Specialized Tools</h2></div>
+						<div class="box"><h2>Ergonomics</h2></div>
+					</div>
+
 					<aside class="notes">
 						- Freedom: canvas that encourages free-from exploration by direct manipulation
 						- Confidence: undo/redo, save changes, versioning
