@@ -13,7 +13,7 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>
+				<section data-background="images/mike-erskine-145535-unsplash.jpg">
 					<h1>Golden Age of Web Platform</h1>
 				</section>
 
@@ -28,7 +28,7 @@
 						- web platform more capable than ever
 						- features more widespread than ever
 						- cause to be overwhelmed
-						- devtools = roboust in all browsers
+						- devtools = robust in all browsers
 						- built to make life easier for web developers. what about web designers?
 					</aside>
 				</section>
@@ -37,7 +37,7 @@
 					<p class="quote quote--left">DevTools in <strong>all browsers</strong>  provide
 					<br>a robust toolkit to empower
 					<br><strong>web developers</strong>.
-					<br><span class="fragment">What about web designers?</span></p>
+					<br><br><span class="fragment">What about web designers?</span></p>
 				</section>
 
 				<section>
@@ -45,29 +45,30 @@
 					<h2>Razvan Caliman</h2>
 					<p>Mozilla - Firefox DevTools</p>
 					<p>Adobe - CSS Regions, CSS Shapes, CSS Masking, Blend Modes, etc.</p>
-				</section>
 
-				<section>
-					<h1>Agenda</h1>
-					<ul>
-						<li>What web designers need?</li>
-						<li>Features available today in DevTools</li>
-						<li>The future of DevTools for Designers</li>
-					</ul>
+					<aside class="notes">
+						# Agenda
+
+						- What web designers need?
+						- Features today in DevTools
+						- Future of DevTools for Designers
+					</aside>
 				</section>
 
 				<section id="firebug" data-background="#fff">
 					<h1>Firebug</h1>
 					<img src="images/firebug_transparent.png" alt="Firebug tool logo.">
 					<aside class="notes">
-						- inspired & competing with Venkman, DOMInspector
+						- inspired by & competing with Venkman, DOMInspector
 						- community of enthusiasts
-						- extensions (important, we'll get back to this)
+						- extensions
 					</aside>
 				</section>
 
 				<section>
-					<img src="images/screenshot_dabblet.jpg" alt="">
+					<video autoplay loop class="fill">
+					 <source data-src="video/dabblet_1080.mov" type="video/quicktime" />
+				  </video>
 					<aside class="notes">
 						- by Lea Verou
 						- online CSS editor & playground like CodePen
@@ -83,16 +84,6 @@ transition: background 2s ease-in-out;
 transform: rotate(235deg) translateX(400px);
 font-family: Helvetica, sans-serif;
 					</aside>
-				</section>
-
-				<section>
-					<ul>
-						<li>Lea Verou</li>
-						<li>Paul Bakaus</li>
-						<li>Konrad Dzwinel</li>
-						<li>Gilmore Davidson</li>
-						<li>Una Kravets</li>
-					</ul>
 				</section>
 
 				<section>
@@ -137,6 +128,7 @@ font-family: Helvetica, sans-serif;
 				<section>
 					<h1>Confidence</h1>
 					<p>Peace of mind that tweaks are reversible and changes are not lost.</p>
+
 					<aside class="notes">
 						- undo/redo
 						- save changes -> export
@@ -145,16 +137,29 @@ font-family: Helvetica, sans-serif;
 				</section>
 
 				<section>
-					Local Overrides in Chrome (video)
+					<h1 class="icon icon--chrome">Local Overrides</h1>
+				</section>
+
+				<section id="chrome-local-overrides">
+					<video autoplay class="fill">
+					 <source data-src="video/chrome-local-overrides-1080.mov" type="video/quicktime" />
+				  </video>
 				</section>
 
 				<section>
-					<h1>Finch -> Export Changes</h1>
+					<h1>Finch Developer Tools</h1>
+				</section>
+
+				<section id="finch">
+					<video autoplay class="fill">
+					 <source data-src="video/finch-1080.mov" type="video/quicktime" />
+				  </video>
 				</section>
 
 				<section>
 					<h1>Specialized tools</h1>
 					<p>Editors focused on doing one thing very well.</p>
+					
 					<aside class="notes">
 						- input vs path editor
 						- input vs color picker
@@ -162,52 +167,46 @@ font-family: Helvetica, sans-serif;
 				</section>
 
 				<section>
-					<h1>CSS Grid Inspector</h1>
+					<h1 class="icon icon--chrome">Color Picker</h1>
 					<p>(video)</p>
 				</section>
 
 				<section>
-					<h1>CSS Filter Editor</h1>
+					<h1 class="icon icon--chrome">CSS Shadow Editor</h1>
 					<p>(video)</p>
 				</section>
 
 				<section>
-					<h1>Fonts Editor</h1>
-					<p>(live demo)</p>
+					<h1 class="icon icon--firefox">CSS Grid Inspector</h1>
+				</section>
+
+				<section id="grid-inspector">
+					<video autoplay class="fill">
+					 <source data-src="video/grid-inspector-1080.mov" type="video/quicktime" />
+					</video>
+
 				</section>
 
 				<section>
-					<h1>Axis-Praxis.org</h1>
-				</section>
-
-				<section>
-					<h1>Shape Path Editor</h1>
-					<p>(live demo)</p>
-				</section>
-
-				<section>
-					<h1>Animation Inspector</h1>
+					<h1 class="icon icon--firefox">CSS Filter Editor</h1>
 					<p>(video)</p>
 				</section>
 
 				<section>
-					<h1>Border editor in Chrome</h1>
+					<h1 class="icon icon--firefox-nightly">Fonts Editor</h1>
+				</section>
+
+				<section>
+					<h1 class="icon icon--firefox-nightly">Shape Path Editor</h1>
+				</section>
+
+				<section>
+					<h1 class="icon icon--safari">CSS Gradient Editor</h1>
 					<p>(video)</p>
 				</section>
 
 				<section>
-					<h1>Accessible color-picker in Chrome</h1>
-					<p>(video)</p>
-				</section>
-
-				<section>
-					<h1>Gradient editor in Safari</h1>
-					<p>(live demo)</p>
-				</section>
-
-				<section>
-					<h1>cssgradient.io</h1>
-					<p>(video)</p>
+					<img src="images/screenshot_cssgradientio.jpg" alt="CSS Gradient.io is a website where people create color gradients using a graphical user interface.">
 				</section>
 
 				<section>
@@ -217,7 +216,7 @@ font-family: Helvetica, sans-serif;
 
 				<section>
 					<h1>Font Inspector</h1>
-					<p>(video)</p>
+					<p>(screenshot)</p>
 				</section>
 
 				<section>
@@ -226,14 +225,18 @@ font-family: Helvetica, sans-serif;
 				</section>
 
 				<section>
+					<img src="images/main-desktop-browser-logos.png" alt="">
 					<h1>Browser DevTools</h1>
-					<notes class="aside">
-						- Always too few people on staff to work on all the things
-					</notes>
+					<aside class="notes">
+						Always too few people on staff to work on all the things
+					</aside>
 				</section>
 
-				<section>
-					<p>React DevTools 1M users</p>
+				<section data-background="hsl(176.5, 22.1%, 84.9%)">
+					<img src="images/screenshot_reactdevtools.png" alt="Tweet from Sophie Alpert highlighing that React Devtools has over 1 million users as of 15 May 2018.">
+					<aside class="notes">
+						Individuals motivated to solve their own problems and share the solution.
+					</aside>
 				</section>
 
 				<section>
@@ -246,8 +249,63 @@ font-family: Helvetica, sans-serif;
 				</section>
 
 				<section>
-					<h1>Review</h1>
-					Freedom, Confidence, Specialized Tools, Ergonomics
+					<h1>API</h1>
+					.registerPropertyPreview({
+						property  // "color", "background", "display"
+						value 	  // CSSUnitValue, CSSImageValue, CSSKeywordValue
+						onShow 	  // function({CSSDeclaration, Node, Rules})
+						onHide 	  // function({CSSDeclaration, Node, Rules})
+					})
+
+					.registerPropertyEditor({
+						property  // "color", "background", "display"
+						value 	  // CSSUnitValue, CSSImageValue, CSSKeywordValue
+						onShow 	  // function({CSSDeclaration, Node, Rules})
+						onHide 	  // function({CSSDeclaration, Node, Rules})
+						onDestroy // function()
+					})
+
+					Node
+						Node.onQuadsChange()
+						Node.onZoomChange()
+						Node.onRemove()
+					...
+
+					CSSDeclaration
+						.value
+						.property
+						.enabled
+						.overriden
+						.parentRule
+
+						.value()
+						.preview()
+						.replace() → Ex: replace shorthand notation
+						.remove()
+
+						onChange()
+						onRemove()
+						onAppliedStateChange() → enabled, disabled, overriden, applied
+					...
+
+					Rules
+						.find(property, [value]) → Find related CSS properties (Ex: backgound-*)
+						.addR()
+						.remove()
+
+					Rule
+						.add
+				</section>
+
+				<section>
+					<p class="quote quote--left">
+						The tools we use sometimes inspire the things we make.
+						<span class="byline">— Mustafa Kurtuldu, Design Advocate at Google</span>
+					</p>
+				</section>
+
+				<section>
+					<p>razvan.is/speaking/cssconfeu-2018</p>
 				</section>
 			</div>
 
