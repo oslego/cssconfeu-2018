@@ -273,3 +273,9 @@ body {
 .divider--four h2 {
   margin: auto;
 }
+
+#masked-panel {
+  mask-image: url(../../../images/mask-alpha.png);
+  mask-type: alpha;
+  mask-size: cover;
+}
