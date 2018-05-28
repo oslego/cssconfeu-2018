@@ -66,8 +66,8 @@
 				</section>
 
 				<section>
-					<video autoplay loop class="fill">
-					 <source data-src="video/dabblet_1080.mov" type="video/quicktime" />
+					<video data-autoplay loop class="fill">
+					 <source data-src="video/dabblet-1080.mov" type="video/quicktime" />
 				  </video>
 					<aside class="notes">
 						- by Lea Verou
@@ -112,9 +112,8 @@ font-family: Helvetica, sans-serif;
 					<p>Free-form canvas that encourages creative exploration.</p>
 				</section>
 
-				<section>
-					<h1>Webflow</h1>
-					<p>(video)</p>
+				<section data-background="#4557ff">
+					<img src="images/webflow.svg" alt="">
 
 					<aside class="notes">
 						- no browser DevTools supports a free-form canvas yet.
@@ -123,6 +122,12 @@ font-family: Helvetica, sans-serif;
 						- tools need a set of common patterns & conventions to make it work
 						- the web is wild
 					</aside>
+				</section>
+
+				<section id="webflow">
+					<video data-autoplay class="fill">
+					 <source data-src="video/webflow.mp4" type="video/mp4" />
+				  </video>
 				</section>
 
 				<section>
@@ -141,17 +146,17 @@ font-family: Helvetica, sans-serif;
 				</section>
 
 				<section id="chrome-local-overrides">
-					<video autoplay class="fill">
+					<video data-autoplay class="fill">
 					 <source data-src="video/chrome-local-overrides-1080.mov" type="video/quicktime" />
 				  </video>
 				</section>
 
 				<section>
-					<h1>Finch Developer Tools</h1>
+					<h1 class="icon icon--finch">Finch Developer Tools</h1>
 				</section>
 
 				<section id="finch">
-					<video autoplay class="fill">
+					<video data-autoplay class="fill">
 					 <source data-src="video/finch-1080.mov" type="video/quicktime" />
 				  </video>
 				</section>
@@ -159,7 +164,7 @@ font-family: Helvetica, sans-serif;
 				<section>
 					<h1>Specialized tools</h1>
 					<p>Editors focused on doing one thing very well.</p>
-					
+
 					<aside class="notes">
 						- input vs path editor
 						- input vs color picker
@@ -168,12 +173,22 @@ font-family: Helvetica, sans-serif;
 
 				<section>
 					<h1 class="icon icon--chrome">Color Picker</h1>
-					<p>(video)</p>
 				</section>
 
 				<section>
-					<h1 class="icon icon--chrome">CSS Shadow Editor</h1>
-					<p>(video)</p>
+					<video data-autoplay class="fill">
+						<source data-src="video/chrome-color-picker-1080.mov" type="video/quicktime" />
+				  </video>
+				</section>
+
+				<section>
+					<h1 class="icon icon--chrome">Text Shadow Editor</h1>
+				</section>
+
+				<section>
+					<video data-autoplay class="fill">
+						<source data-src="video/chrome-text-shadow-editor-1080.mov" type="video/quicktime" />
+					</video>
 				</section>
 
 				<section>
@@ -181,15 +196,20 @@ font-family: Helvetica, sans-serif;
 				</section>
 
 				<section id="grid-inspector">
-					<video autoplay class="fill">
-					 <source data-src="video/grid-inspector-1080.mov" type="video/quicktime" />
+					<video data-autoplay class="fill">
+						<source data-src="video/firefox-grid-inspector-1080.mov" type="video/quicktime" />
 					</video>
 
 				</section>
 
 				<section>
 					<h1 class="icon icon--firefox">CSS Filter Editor</h1>
-					<p>(video)</p>
+				</section>
+
+				<section>
+					<video data-autoplay class="fill">
+						<source data-src="video/firefox-filter-editor-1080.mov" type="video/quicktime" />
+				  </video>
 				</section>
 
 				<section>
@@ -210,7 +230,7 @@ font-family: Helvetica, sans-serif;
 				</section>
 
 				<section>
-					<h1>CSSPeeper</h1>
+					<h1 class="icon icon--csspeeper">CSSPeeper</h1>
 					<p>(screenshot)</p>
 				</section>
 
@@ -328,13 +348,40 @@ font-family: Helvetica, sans-serif;
 				margin: 0,
 				minScale: 1,
 				maxScale: 1,
-				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
-					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-				]
+				dependencies: []
 			});
+
+			const VIDEOS = {
+				"video/dabblet-1080.mp4"									: "SdypiUrbUUY",
+				"video/webflow.mp4"												: "2iwzJztFngY",
+				"video/chrome-local-overrides-1080.mov"		: "8dt9BLHW2qU",
+				"video/finch-1080.mov"										: "jNSQJCxvcso",
+				"video/chrome-color-picker-1080.mov"			: "2gAW0pUOBRI",
+				"video/chrome-text-shadow-editor-1080.mov": "9z7P4Xqr2dU",
+				"video/firefox-grid-inspector-1080.mov"		: "htOYSr-o3zs",
+				"video/firefox-filter-editor-1080.mov"		: "fVL7SExyiEU",
+			}
+
+			function getYTPlayerHTML(id) {
+				return`
+				<iframe class="youtube-iframe" width="1280px" height="720px" src="https://www.youtube-nocookie.com/embed/${id}?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				`
+			}
+
+			Reveal.addEventListener('slidechanged', (e) => {
+				let video = e.currentSlide.querySelector('video');
+				if (video && isNaN(video.duration)) {
+					let source = video.querySelector('source');
+					let path = source.getAttribute('src');
+					let youtubeID = VIDEOS[path];
+
+					if (youtubeID) {
+						video.outerHTML = getYTPlayerHTML(youtubeID)
+					}
+				}
+			});
+
+
 		</script>
 	</body>
 </html>
