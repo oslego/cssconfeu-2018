@@ -5,7 +5,7 @@
 
 ## Parts
 
-0. Preamble (2min)
+0. Preamble
   - Golden Age for web platform:
     - most capable than ever;
     - most uniformly distributed features than ever;
@@ -16,12 +16,12 @@
   - great for web developers; what about web designers?
   - intro & agenda
 
-1. Acknowledgement of DevTools & its history (3min)
+1. Acknowledgement of DevTools & its history
   - Firebug origins
   - Extensibility + community of enthusiasts
   - Dabblet by Lea Verou (online CSS editor with specialized property previews)
 
-3. What web designers need so they can design in the browser? (5min)
+2. What web designers need so they can design in the browser?
     - not about designers learning how to code
     - expectations of their tools in order to become productive:
       - freedom: canvas which encourages free-from exploration; DIRECT MANIPULATION
@@ -29,7 +29,7 @@
       - specialized tools: code is an abstraction; slow to get from idea to visual means less experimentation
       - ergonomics: ability to customize, personalize, save and share pattern libraries
 
-4. Freedom (3min)
+3. Freedom
   - no DevTools implements a free-form canvas yet
     - everything interacts in CSS/HTML (good, because you want to see real end results)
     - difficult to fit into the underlying structure of foreign codebases
@@ -37,11 +37,11 @@
   - Webflow (video)
   - Chris Heilmann's "Sacrificing the Golden Calf of Coding"
 
-5. Confidence (3min)
+4. Confidence (3min)
   - Problem: changes in DevTools are lost on refresh; ephemeral (can't share with others)
   - Chrome Local Overrides (video)
 
-6. Specialized Tools (15min)
+5. Specialized Tools
   - CSS Grid Inspector (video)
   - CSS Filter Editor (video)
   - Variable Fonts Editor (demo)
@@ -56,12 +56,12 @@
     - transforms editor (Gilmore Davidson)
     ...
 
-7. Ergonomics & Future (5min)
+6. Ergonomics & Future
   - AJ Kandy: "A DevTools for Designers"
   - Jen Simmons: Highlighter -> Inspector -> Editor
-  - Many tools still at Inspector mode if at all.
-  - DevTools hired staff: always to few people -> working on priorities.
+  - Many tools still at Inspector mode, if at all.
+  - DevTools hired staff: always too few people -> working on priorities.
   - Need community involvement. Individuals are motivated to create tools to solve issues they care about.
-  - DevTools API to register tools for CSS properties / rules
+  - DevTools API to register tools for CSS properties
   - Contextual tool recommendations;
   - Personalize own toolset with extensions.
