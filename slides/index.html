@@ -222,7 +222,10 @@ font-family: Helvetica, sans-serif;
 
 				<section>
 					<h1 class="icon icon--safari">CSS Gradient Editor</h1>
-					<p>(video)</p>
+				</section>
+
+				<section>
+					<img src="images/screenshot_safari-gradient-editor.jpg" alt="Safari DevTools has a CSS gradient editor. It is shown here in use on grabient.com, a website where people create color gradients using a graphical user interface.">
 				</section>
 
 				<section>
@@ -230,13 +233,9 @@ font-family: Helvetica, sans-serif;
 				</section>
 
 				<section>
-					<h1 class="icon icon--csspeeper">CSSPeeper</h1>
-					<p>(screenshot)</p>
-				</section>
-
-				<section>
-					<h1>Font Inspector</h1>
-					<p>(screenshot)</p>
+					<video data-autoplay class="fill">
+						<source data-src="video/easing-gradients-editor-1080.mov" type="video/quicktime" />
+					</video>
 				</section>
 
 				<section>
@@ -248,7 +247,7 @@ font-family: Helvetica, sans-serif;
 					<img src="images/main-desktop-browser-logos.png" alt="">
 					<h1>Browser DevTools</h1>
 					<aside class="notes">
-						Always too few people on staff to work on all the things
+						Few people on staff to work on all the things.
 					</aside>
 				</section>
 
@@ -371,6 +370,7 @@ font-family: Helvetica, sans-serif;
 				"video/chrome-text-shadow-editor-1080.mov": "9z7P4Xqr2dU",
 				"video/firefox-grid-inspector-1080.mov"		: "htOYSr-o3zs",
 				"video/firefox-filter-editor-1080.mov"		: "fVL7SExyiEU",
+				"video/easing-gradients-editor-1080.mov" 	: "ZHF25PzQiCA",
 			}
 
 			function getYTPlayerHTML(id) {
@@ -379,6 +379,7 @@ font-family: Helvetica, sans-serif;
 				`
 			}
 
+			// Replace <video> with with YouTube player when local videos can't be found/played.
 			Reveal.addEventListener('slidechanged', (e) => {
 				let video = e.currentSlide.querySelector('video');
 				if (video && isNaN(video.duration)) {
