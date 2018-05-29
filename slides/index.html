@@ -240,7 +240,7 @@ font-family: Helvetica, sans-serif;
 
 				<section>
 					<h1>Ergonomics</h1>
-					<p>customize, personalize</p>
+					<p>Tools customized to fit the way people work.</p>
 				</section>
 
 				<section>
@@ -275,56 +275,76 @@ font-family: Helvetica, sans-serif;
 				</section>
 
 				<section>
-					API for DevTools - register tools for Rule View, contextual recommendations.
+					<img data-src="images/dt-font-weight-editor.png" class="fill" alt="Proposed editor for CSS font-weight as a DevTools extension.">
+				</section>
+
+				<section>
+					<img data-src="images/dt-font-weight-editor-multi.png" class="fill" alt="Multiple editors for the same CSS property provided as DevTools extensions.">
+				</section>
+
+				<section>
+					<img data-src="images/dt-mutliple-editors.png" class="fill" alt="
+					Multiple editors open at the same time for different CSS properties.">
+				</section>
+
+				<section>
+					<img data-src="images/dt-angle-preview.png" class="fill" alt="Preview tooltip illustrating the value of a CSS transform property.">
+				</section>
+
+				<section>
+					<img data-src="images/dt-recommendation.png" class="fill" alt="DevTools recommending an extension for editing a CSS gradient property.">
 				</section>
 
 				<section>
 					<h1>API</h1>
-					.registerPropertyPreview({
-						property  // "color", "background", "display"
-						value 	  // CSSUnitValue, CSSImageValue, CSSKeywordValue
-						onShow 	  // function({CSSDeclaration, Node, Rules})
-						onHide 	  // function({CSSDeclaration, Node, Rules})
-					})
+	<pre>
+.registerPropertyPreview({
+	property  // "color", "background", "display"
+	value 	  // CSSUnitValue, CSSImageValue, CSSKeywordValue
+	onShow 	  // function(CSSDeclaration, Node, Rules)
+	onHide 	  // function(CSSDeclaration, Node, Rules)
+})
+</pre>
+<pre>
+.registerPropertyEditor({
+	property  // "color", "background", "display"
+	value 	  // CSSUnitValue, CSSImageValue, CSSKeywordValue
+	onShow 	  // function(CSSDeclaration, Node, Rules)
+	onHide 	  // function(CSSDeclaration, Node, Rules)
+	onDestroy // function()
+})
+</pre>
+<pre>
+Node
+	Node.onQuadsChange()
+	Node.onZoomChange()
+	Node.onRemove()
+...
+</pre>
+<pre>
+CSSDeclaration
+	.value
+	.property
+	.enabled
+	.overriden
+	.parentRule
 
-					.registerPropertyEditor({
-						property  // "color", "background", "display"
-						value 	  // CSSUnitValue, CSSImageValue, CSSKeywordValue
-						onShow 	  // function({CSSDeclaration, Node, Rules})
-						onHide 	  // function({CSSDeclaration, Node, Rules})
-						onDestroy // function()
-					})
+	.value()
+	.preview()
+	.replace() → Ex: replace shorthand notation
+	.remove()
 
-					Node
-						Node.onQuadsChange()
-						Node.onZoomChange()
-						Node.onRemove()
-					...
-
-					CSSDeclaration
-						.value
-						.property
-						.enabled
-						.overriden
-						.parentRule
-
-						.value()
-						.preview()
-						.replace() → Ex: replace shorthand notation
-						.remove()
-
-						onChange()
-						onRemove()
-						onAppliedStateChange() → enabled, disabled, overriden, applied
-					...
-
-					Rules
-						.find(property, [value]) → Find related CSS properties (Ex: backgound-*)
-						.addR()
-						.remove()
-
-					Rule
-						.add
+	onChange()
+	onRemove()
+	onAppliedStateChange() → enabled, disabled, overriden, applied
+...
+</pre>
+<pre>
+Rules
+	.find(property, [value]) → Find related CSS properties (Ex: backgound-*)
+	.addR()
+	.remove()
+</pre>
 				</section>
 
 				<section>
