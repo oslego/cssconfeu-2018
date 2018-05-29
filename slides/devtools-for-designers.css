@@ -3,7 +3,7 @@
  *
  * By Hakim El Hattab, http://hakim.se
  */
-@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+@import url(lib/font/source-sans-pro/source-sans-pro.css);
 section.has-light-background, section.has-light-background h1, section.has-light-background h2, section.has-light-background h3, section.has-light-background h4, section.has-light-background h5, section.has-light-background h6 {
   color: #222; }
 
@@ -77,27 +77,27 @@ body {
 }
 
 .reveal h1.icon--firefox {
-  background-image: url(../../../images/firefox.svg);
+  background-image: url(images/firefox.svg);
 }
 
 .reveal h1.icon--firefox-nightly {
-  background-image: url(../../../images/firefox-nightly.svg);
+  background-image: url(images/firefox-nightly.svg);
 }
 
 .reveal h1.icon--chrome {
-  background-image: url(../../../images/chrome.svg);
+  background-image: url(images/chrome.svg);
 }
 
 .reveal h1.icon--safari {
-  background-image: url(../../../images/safari.png);
+  background-image: url(images/safari.png);
 }
 
 .reveal h1.icon--finch {
-  background-image: url(../../../images/finch.png);
+  background-image: url(images/finch.png);
 }
 
 .reveal h1.icon--csspeeper {
-  background-image: url(../../../images/csspeeper.png);
+  background-image: url(images/csspeeper.png);
 }
 
 /*********************************************
@@ -275,7 +275,7 @@ body {
 }
 
 #masked-panel {
-  mask-image: url(../../../images/mask-alpha.png);
+  mask-image: url(images/mask-alpha.png);
   mask-type: alpha;
   mask-size: cover;
 }
