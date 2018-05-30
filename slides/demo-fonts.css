@@ -1,0 +1,30 @@
+/* @font-face {
+  font-family: "FF Meta Variable";
+  src: url("/lib/font/ff-meta/MetaVariableDemo-Set.woff2");
+} */
+
+@font-face {
+  font-family: 'Amstelvar';
+	src: url('/lib/font/amstelvar/AmstelvarAlpha-VF.ttf');
+	font-style: normal;
+}
+
+
+/* .reveal .font-ff-meta {
+  font-family: "FF Meta Variable", -apple-system, Helvetica, Arial, sans-serif;
+  font-size: 2em;
+  line-height: 1.125;
+} */
+
+.reveal .font-amstelvar {
+  font-family: "Amstelvar", -apple-system, Helvetica, Arial, sans-serif;
+  font-size: 5em;
+  line-height: 1;
+  font-style: normal;
+}
+
+.demo-fonts{
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+}
