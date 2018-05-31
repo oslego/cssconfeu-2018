@@ -145,6 +145,13 @@ body {
   background-image: url(images/finch.png);
 }
 
+.reveal h1.icon--twitter {
+  background-image: url(images/twitter.svg);
+  background-size: 1.3em 1.3em;
+  background-position: left center;
+  margin-bottom: .5em;
+}
+
 
 /*********************************************
  * OTHER
