@@ -14,8 +14,8 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-background="images/mike-erskine-145535-unsplash.jpg">
-					<h1>Golden Age of Web Platform</h1>
+				<section data-background="images/preamble.jpg">
+					<h1 class="preamble">Golden Age of Web Platform</h1>
 				</section>
 
 				<section>
@@ -94,10 +94,10 @@ font-family: Helvetica, sans-serif;
 
 				<section>
 					<div class="divider--four">
-						<div class="box"><h2>Freedom</h2></div>
-						<div class="box"><h2>Confidence</h2></div>
-						<div class="box"><h2>Specialized Tools</h2></div>
-						<div class="box"><h2>Ergonomics</h2></div>
+						<div class="box box--freedom"><h2>Freedom</h2></div>
+						<div class="box box--confidence"><h2>Confidence</h2></div>
+						<div class="box box--specialized-tools"><h2>Specialized Tools</h2></div>
+						<div class="box box--ergonomics"><h2>Ergonomics</h2></div>
 					</div>
 
 					<aside class="notes">
@@ -108,9 +108,9 @@ font-family: Helvetica, sans-serif;
 					</aside>
 				</section>
 
-				<section>
-					<h1>Freedom</h1>
-					<p>Free-form canvas that encourages creative exploration.</p>
+				<section data-background="images/freedom.jpg">
+					<h1 class="freedom">Freedom</h1>
+					<p class="tagline">Canvas that encourages creative exploration</p>
 				</section>
 
 				<section data-background="#4557ff">
@@ -131,9 +131,9 @@ font-family: Helvetica, sans-serif;
 				  </video>
 				</section>
 
-				<section>
-					<h1>Confidence</h1>
-					<p>Peace of mind that tweaks are reversible and changes are not lost.</p>
+				<section data-background="images/confidence.jpg">
+					<h1 class="confidence">Confidence</h1>
+					<p class="tagline">Peace of mind that tweaks are reversible and changes are not lost</p>
 
 					<aside class="notes">
 						- undo/redo
@@ -153,18 +153,18 @@ font-family: Helvetica, sans-serif;
 				</section>
 
 				<section>
-					<h1 class="icon icon--finch">Finch Developer Tools</h1>
+					<h1 id="finch" class="icon icon--finch">Finch Developer Tools</h1>
 				</section>
 
-				<section id="finch">
+				<section>
 					<video data-autoplay class="fill">
 					 <source data-src="video/finch-1080.mov" type="video/quicktime" />
 				  </video>
 				</section>
 
-				<section>
-					<h1>Specialized tools</h1>
-					<p>Editors focused on doing one thing very well.</p>
+				<section data-background="images/specialized-tools.jpg">
+					<h1 class="specialized-tools">Specialized Tools</h1>
+					<p class="tagline">Editors focused on doing one thing very well</p>
 
 					<aside class="notes">
 						- input vs path editor
@@ -214,6 +214,24 @@ font-family: Helvetica, sans-serif;
 				</section>
 
 				<section>
+					<h1 class="icon icon--safari">CSS Gradient Editor</h1>
+				</section>
+
+				<section>
+					<img data-src="images/screenshot_safari-gradient-editor.jpg" alt="Safari DevTools has a CSS gradient editor. It is shown here in use on grabient.com, a website where people create color gradients using a graphical user interface.">
+				</section>
+
+				<!-- <section>
+					<img data-src="images/screenshot_cssgradientio.jpg" alt="CSS Gradient.io is a website where people create color gradients using a graphical user interface.">
+				</section> -->
+
+				<section>
+					<video data-autoplay class="fill">
+						<source data-src="video/easing-gradients-editor-1080.mov" type="video/quicktime" />
+					</video>
+				</section>
+
+				<section>
 					<h1 class="icon icon--firefox-nightly">Fonts Editor</h1>
 				</section>
 
@@ -241,27 +259,10 @@ font-family: Helvetica, sans-serif;
 					</section>
 				</section>
 
-				<section>
-					<h1 class="icon icon--safari">CSS Gradient Editor</h1>
-				</section>
 
-				<section>
-					<img data-src="images/screenshot_safari-gradient-editor.jpg" alt="Safari DevTools has a CSS gradient editor. It is shown here in use on grabient.com, a website where people create color gradients using a graphical user interface.">
-				</section>
-
-				<section>
-					<img data-src="images/screenshot_cssgradientio.jpg" alt="CSS Gradient.io is a website where people create color gradients using a graphical user interface.">
-				</section>
-
-				<section>
-					<video data-autoplay class="fill">
-						<source data-src="video/easing-gradients-editor-1080.mov" type="video/quicktime" />
-					</video>
-				</section>
-
-				<section>
-					<h1>Ergonomics</h1>
-					<p>Tools customized to fit the way people work.</p>
+				<section data-background="images/ergonomics.jpg">
+					<h1 class="ergonomics">Ergonomics</h1>
+					<p class="tagline">Tools customized to fit the way people work</p>
 				</section>
 
 				<section>
@@ -317,55 +318,62 @@ font-family: Helvetica, sans-serif;
 				</section>
 
 				<section>
-					<h1>API</h1>
+					<section>
+						<h1 class="icon icon--firefox-nightly">@FirefoxDevTools</h1>
+						<h1 class="icon icon--firefox-nightly">@FirefoxDevTools</h1>
+					</section>
+
+					<section>
+						<h1>API</h1>
+		<pre>
+	.registerPropertyPreview({
+		property  // "color", "background", "display"
+		value 	  // CSSUnitValue, CSSImageValue, CSSKeywordValue
+		onShow 	  // function(CSSDeclaration, Node, Rules)
+		onHide 	  // function(CSSDeclaration, Node, Rules)
+	})
+	</pre>
 	<pre>
-.registerPropertyPreview({
-	property  // "color", "background", "display"
-	value 	  // CSSUnitValue, CSSImageValue, CSSKeywordValue
-	onShow 	  // function(CSSDeclaration, Node, Rules)
-	onHide 	  // function(CSSDeclaration, Node, Rules)
-})
-</pre>
-<pre>
-.registerPropertyEditor({
-	property  // "color", "background", "display"
-	value 	  // CSSUnitValue, CSSImageValue, CSSKeywordValue
-	onShow 	  // function(CSSDeclaration, Node, Rules)
-	onHide 	  // function(CSSDeclaration, Node, Rules)
-	onDestroy // function()
-})
-</pre>
-<pre>
-Node
-	Node.onQuadsChange()
-	Node.onZoomChange()
-	Node.onRemove()
-...
-</pre>
-<pre>
-CSSDeclaration
-	.value
-	.property
-	.enabled
-	.overriden
-	.parentRule
+	.registerPropertyEditor({
+		property  // "color", "background", "display"
+		value 	  // CSSUnitValue, CSSImageValue, CSSKeywordValue
+		onShow 	  // function(CSSDeclaration, Node, Rules)
+		onHide 	  // function(CSSDeclaration, Node, Rules)
+		onDestroy // function()
+	})
+	</pre>
+	<pre>
+	Node
+		Node.onQuadsChange()
+		Node.onZoomChange()
+		Node.onRemove()
+	...
+	</pre>
+	<pre>
+	CSSDeclaration
+		.value
+		.property
+		.enabled
+		.overriden
+		.parentRule
 
-	.value()
-	.preview()
-	.replace() → Ex: replace shorthand notation
-	.remove()
+		.value()
+		.preview()
+		.replace() → Ex: replace shorthand notation
+		.remove()
 
-	onChange()
-	onRemove()
-	onAppliedStateChange() → enabled, disabled, overriden, applied
-...
-</pre>
-<pre>
-Rules
-	.find(property, [value]) → Find related CSS properties (Ex: backgound-*)
-	.addR()
-	.remove()
-</pre>
+		onChange()
+		onRemove()
+		onAppliedStateChange() → enabled, disabled, overriden, applied
+	...
+	</pre>
+	<pre>
+	Rules
+		.find(property, [value]) → Find related CSS properties (Ex: backgound-*)
+		.addR()
+		.remove()
+	</pre>
+					</section>
 				</section>
 
 				<section>

@@ -12,7 +12,9 @@ section.has-light-background, section.has-light-background h1, section.has-light
  *********************************************/
 body {
   background: #222;
-  background-color: #222; }
+  background-color: #222;
+  background: linear-gradient(45deg, #300957, purple);
+}
 
 .reveal {
   font-family: -apple-system, "Source Sans Pro", Helvetica, sans-serif;
@@ -55,7 +57,8 @@ body {
   word-wrap: break-word; }
 
 .reveal h1 {
-  font-size: 3em; }
+  font-size: 4em;
+ }
 
 .reveal h2 {
   font-size: 1.6em; }
@@ -65,6 +68,46 @@ body {
 
 .reveal h4 {
   font-size: 1em; }
+
+.reveal h1.preamble {
+  font-size: 3em;
+}
+
+.reveal h1.preamble,
+.reveal h1.confidence,
+.reveal h1.ergonomics,
+.reveal h1.freedom {
+  text-shadow: 0 0 15px hsla(0, 0%, 0%, 0.5);
+}
+
+.reveal p.tagline {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: 0 0 10px #000;
+}
+
+.reveal h1.confidence,
+.reveal h1.confidence + p.tagline {
+  text-shadow: 0 0 19px hsla(0, 0%, 0%, 0.7);
+}
+.reveal h1.ergonomics,
+.reveal h1.ergonomics + p.tagline {
+  text-shadow: 0 0 10px hsla(0, 0%, 0%, 1);
+}
+
+.reveal h1.freedom,
+.reveal h1.freedom + p.tagline {
+  text-shadow: 0 0 10px hsla(0, 0%, 0%, 0.5);
+}
+
+.reveal h1.specialized-tools {
+  margin-top: -1em;
+}
+
+.reveal h1#finch {
+  font-size: 3em;
+}
 
 .reveal h1.icon {
   font-size: 4em;
@@ -96,9 +139,6 @@ body {
   background-image: url(images/finch.png);
 }
 
-.reveal h1.icon--csspeeper {
-  background-image: url(images/csspeeper.png);
-}
 
 /*********************************************
  * OTHER
@@ -254,6 +294,7 @@ body {
   font-size: 5em;
   letter-spacing: -.05em;
   font-family: "Source Sans Pro", -apple-system, sans-serif;
+  text-shadow: none;
 }
 
 .divider--four {
@@ -261,17 +302,36 @@ body {
   width: 100vw;
   height: 100vh;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  grid-gap: 2px;
 }
 
 .divider--four .box{
   width: 100%;
   height: 100%;
   display: flex;
+  background-size: cover;
+}
+
+.divider--four .box--freedom {
+  background-image: url(images/freedom.jpg);
+}
+
+.divider--four .box--confidence {
+  background-image: url(images/confidence.jpg)
+}
+
+.divider--four .box--specialized-tools {
+  background-image: url(images/specialized-tools.jpg);
+}
+
+.divider--four .box--ergonomics {
+  background-image: url(images/ergonomics.jpg)
 }
 
 .divider--four h2 {
   margin: auto;
+  font-size: 2.3em;
+  text-shadow: 0 0 10px hsla(0, 0%, 0%, 0.9);
 }
 
 #masked-panel {
