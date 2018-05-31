@@ -27,4 +27,10 @@
   display: grid;
   height: 100vh;
   width: 100vw;
+  grid-template-columns: 1fr;
+}
+
+.demo-fonts .font-amstelvar{
+  grid-column: 1;
+  margin: auto;
 }

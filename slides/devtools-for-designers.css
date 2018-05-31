@@ -69,6 +69,12 @@ body {
 .reveal h4 {
   font-size: 1em; }
 
+.reveal h1.title {
+  letter-spacing: -0.05em;
+  text-shadow: 5px 5px 0 #2a0a3b;
+  font-weight: 700;
+}
+
 .reveal h1.preamble {
   font-size: 3em;
 }
@@ -273,14 +279,11 @@ body {
   margin: auto;
 }
 
-.reveal .quote {
+.reveal .statement {
   font-size: 2.5em;
   padding: 0 1em;
   font-weight: 400;
   line-height: 1.125;
-}
-
-.reveal .quote--left {
   text-align: left;
 }
 
@@ -288,6 +291,11 @@ body {
   font-size: .5em;
   display: block;
   margin-top: 2em;
+}
+
+.reveal .quote {
+  font-weight: 200;
+  font-style: oblique;
 }
 
 #firebug h1{
@@ -302,7 +310,6 @@ body {
   width: 100vw;
   height: 100vh;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 2px;
 }
 
 .divider--four .box{
@@ -339,3 +346,66 @@ body {
   mask-type: alpha;
   mask-size: cover;
 }
+
+#title-slide {
+  display: grid;
+  height: 80vh;
+  max-width: 90vw;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 1fr;
+  margin: auto;
+}
+
+#title-slide .title {
+  grid-column: 1 / span 4;
+  margin: auto;
+}
+
+#title-slide .author {
+  grid-column: 1 / span 4;
+  color: hsla(0, 0%, 100%, 0.7);
+  font-weight: 600;
+  font-size: 1.6em;
+  margin: -1em 0 0 0;
+}
+
+.job {
+  display: grid;
+  grid-template-columns: 3em 1fr;
+  grid-column-gap: .8em;
+  text-align: left;
+}
+
+.job p {
+  margin-top: 0;
+  font-size: 1.2em;
+  font-weight: 200;
+}
+
+.job--mozilla {
+  grid-column: 2;
+}
+
+.job--adobe {
+  grid-column: 3 / span 2;
+}
+
+.job--adobe img{
+  width: 2em;
+  margin-top: .25em;
+  margin-left: auto;
+}
+
+.browser-devtools {
+  width: 90vw;
+}
+
+.react-devtools {
+  mask-image: linear-gradient(white 98%, transparent);
+}
+
+// magenta
+// background: linear-gradient(45deg, #300957, #007e80);
+
+// lime
+// background: linear-gradient(45deg, #2c3936, #07e78e);
